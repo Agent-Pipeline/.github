@@ -12,25 +12,25 @@ Agent Pipeline is a collection of production repositories focused on data engine
 - Operational dashboards and internal applications
 - Reporting feeds and data distribution solutions
 
-## Repository portfolio
+## Portfolio highlights
 
 ### Core data pipelines
 
-- [Daily reporting pipeline](https://github.com/Agent-Pipeline/simplified-all-agent-report-pipeline) — Delivers the S-AAR output to Files.com from Snowflake.
-- [RTS reporting pipeline](https://github.com/Agent-Pipeline/integrity-downline-permissions-pipeline) — Helps ensure permissions are accurately reflected across downstream systems.
-- [Weekly compliance reporting pipeline](https://github.com/Agent-Pipeline/expiring-taxpayer-pipeline) — Tracks missing or expiring W9s and sends updates to HubSpot.
-- [Health reporting workflow](https://github.com/Agent-Pipeline/unified-health-call-center-reporting) — Collects, validates, and consolidates health reporting data from shared inbox sources.
+- Daily reporting workflows delivering S-AAR outputs from Snowflake.
+- RTS permissions reporting to validate downstream access accuracy.
+- Weekly compliance tracking for missing or expiring W9 activity.
+- Health reporting operations consolidating data from shared inbox sources.
 
 ### Services and platform logic
 
-- [Core processing service](https://github.com/Agent-Pipeline/db-flow-service) — Houses core carrier-processing logic and orchestrates critical data pipeline workflows.
-- [Data freshness reporting service](https://github.com/Agent-Pipeline/data-freshness-reporting-service) — Distributes data freshness reporting to agencies that request it.
-- [Consolidated reporting feeds](https://github.com/Agent-Pipeline/data-consolidation-feeds) — Aggregates and distributes unique carrier reporting feeds.
+- Core processing services for carrier logic and workflow orchestration.
+- Data freshness distribution for agency reporting requests.
+- Consolidated reporting feeds for unique carrier distribution.
 
 ### Reporting and application layers
 
-- [Comparison reporting application](https://github.com/Agent-Pipeline/comparison-reporting-app) — Supports production report generation for comparison-based analysis.
-- [Call center reporting ETL](https://github.com/Agent-Pipeline/bi-callcenter-etl) — Powers ETL processing for the Call Center Dashboard.
+- Comparison reporting applications for business analysis.
+- Call center reporting processes supporting dashboard operations.
 
 ## Focus areas
 
@@ -66,7 +66,7 @@ Our repositories are organized around clear operational themes and naming patter
 
 ## Explore the org
 
-Browse the repositories above to see the breadth of the Agent Pipeline ecosystem, from data movement and processing to operational reporting and business-facing applications.
+Browse the areas above to see the breadth of the Agent Pipeline ecosystem, from data movement and processing to operational reporting and business-facing applications.
 
 ---
 
