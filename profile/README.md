@@ -1,294 +1,73 @@
-# Agent Pipeline Engineering
+# Agent Pipeline
 
-> Building reliable data products, scalable automation, and internal platforms that enable better business decisions.
+> Operational data systems, reporting pipelines, and business intelligence tooling built for reliable decision support.
 
----
-## 📚 Table of Contents
+Agent Pipeline is a collection of production repositories focused on data engineering, automation, reporting, and operational analytics. The organization brings together ETL workflows, reusable services, internal applications, and scheduled data products that support internal teams and downstream reporting needs.
 
-- [Overview](#Overview)
-- [Engineering Principles](#engineering-structure)
-- [Repository Standards](#repository-standards)
-- [Semantic Commit Standards](#semantic-commit-standards)
-- [Development Lifecycle](#development-lifecycle)
-- [Branching Strategy](#branching-strategy)
-- [Contribution Standards](#contribution-standards)
-- [Support](#support)
-- [Mission](#mission)
----
+## What we build
 
-## Overview
+- Data pipelines and scheduled delivery workflows
+- ETL and ELT processes for reporting and integration
+- Shared services for core business logic and data processing
+- Operational dashboards and internal applications
+- Reporting feeds and data distribution solutions
 
-Welcome to the Agent Pipeline Engineering GitHub organization.
+## Repository portfolio
 
-This organization contains the source code, data pipelines, services, and internal applications that power Agent Pipeline's reporting, analytics, automation, and operational intelligence initiatives.
+### Core data pipelines
 
-Our team develops and maintains solutions across the data lifecycle, from ingestion and transformation through business reporting and application delivery. Our primary technology stack includes **Python**, **SQL**, and **Azure**.
+- [simplified-all-agent-report-pipeline](https://github.com/Agent-Pipeline/simplified-all-agent-report-pipeline) — Daily reporting pipeline delivering the S-AAR to Files.com from Snowflake.
+- [integrity-downline-permissions-pipeline](https://github.com/Agent-Pipeline/integrity-downline-permissions-pipeline) — RTS reporting pipeline that helps ensure permissions are accurately reflected across systems.
+- [expiring-taxpayer-pipeline](https://github.com/Agent-Pipeline/expiring-taxpayer-pipeline) — Weekly reporting pipeline for tracking missing or expiring W9s and sending updates to HubSpot.
+- [unified-health-call-center-reporting](https://github.com/Agent-Pipeline/unified-health-call-center-reporting) — Scheduled Windows task workflow that collects, validates, and consolidates Health reports from shared inboxes.
 
-### Core Areas
+### Services and platform logic
 
-- Data Engineering
-- Business Intelligence & Analytics
-- Process Automation
-- Internal Applications & Services
-- Operational Reporting
-- Data Quality & Governance
----
+- [db-flow-service](https://github.com/Agent-Pipeline/db-flow-service) — Core carrier-processing logic and business-critical data pipeline orchestration for Agent Pipeline BI dashboards.
+- [data-freshness-reporting-service](https://github.com/Agent-Pipeline/data-freshness-reporting-service) — Service that distributes data freshness reporting to agencies that request it.
+- [data-consolidation-feeds](https://github.com/Agent-Pipeline/data-consolidation-feeds) — Aggregates and distributes unique carrier reporting feeds.
 
-## Engineering Principles
+### Reporting and application layers
 
-Our development practices are rooted in three fundamental principles:
+- [comparison-reporting-app](https://github.com/Agent-Pipeline/comparison-reporting-app) — Production application used for comparison report generation.
+- [bi-callcenter-etl](https://github.com/Agent-Pipeline/bi-callcenter-etl) — ETL process supporting the Call Center Dashboard.
 
-### 🤖 Automation Over Manual Processes
+## Focus areas
 
-We prioritize automation wherever practical to eliminate repetitive work, improve consistency, and increase operational efficiency.
+### Data engineering
+Automating ingestion, transformation, and delivery of business-critical data across reporting pipelines and operational workflows.
 
-### ✅ Data Integrity First
+### Reporting and analytics
+Supporting dashboards, downstream file delivery, and operational reporting for internal stakeholders and business partners.
 
-Business decisions depend on accurate and trustworthy data. We emphasize validation, monitoring, quality controls, and auditability throughout the data lifecycle.
+### Quality and governance
+Providing validation, monitoring, and structured processing patterns to improve data trust and operational reliability.
 
-### 📈 Continuous Improvement
+### Reusable platform capabilities
+Building services and shared logic that can be reused across multiple reporting and automation use cases.
 
-We believe every deployment presents an opportunity to improve performance, maintainability, scalability, and user experience.
+## Engineering standards
 
----
+- Production-ready automation over manual execution
+- Clear data validation and monitoring at key handoff points
+- Repository documentation that explains purpose, inputs, outputs, and dependencies
+- Pull request review and collaborative change management
+- Semantic commit conventions for maintainable history and clearer release tracking
 
-## Repository Structure
+## Repository conventions
 
-Repositories are organized using standardized naming conventions to improve discoverability and consistency.
+Our repositories are organized around clear operational themes and naming patterns, including:
 
-### Data Pipelines (`-pipeline`)
+- `-pipeline` for scheduled data movement and delivery workflows
+- `-etl` for extraction and transformation processes
+- `-service` for shared business logic and orchestration
+- `-app` for application-layer tooling and reporting experiences
+- `-feeds` for reporting distribution and feed-based integrations
 
-Purpose:
+## Explore the org
 
-- Data movement and orchestration
-- Scheduled ETL/ELT workloads
-- Reporting delivery processes
-- System integrations
-
-Examples:
-
-- `integrity-downline-permissions-pipeline`
-- `simplified-all-agent-report-pipeline`
+Browse the repositories above to see the breadth of the Agent Pipeline ecosystem, from data movement and processing to operational reporting and business-facing applications.
 
 ---
 
-### ETL Solutions (`-etl`)
-
-Purpose:
-
-- Dedicated extraction, transformation, and loading processes
-- Source system integrations
-- Reporting support
-
-Examples:
-
-- `bi-callcenter-etl`
-
----
-
-### Services (`-service`)
-
-Purpose:
-
-- Shared business logic
-- API integrations
-- Reusable platform services
-- Processing orchestration
-
-Examples:
-
-- `db-flow-service`
-- `data-freshness-reporting-service`
-
----
-
-### Applications (`-app`)
-
-Purpose:
-
-- User-facing applications
-- Internal business tools
-- Operational utilities
-
-Examples:
-
-- `comparison-reporting-app`
-
----
-
-### Data Feeds (`-feeds`)
-
-Purpose:
-
-- Data distribution
-- External exchanges
-- Carrier reporting delivery
-
-Examples:
-
-- `data-consolidation-feeds`
-
----
-
-## Repository Standards
-
-Each repository should include:
-
-```text
-README.md
-CHANGELOG.md
-/src
-/tests
-/docs
-```
-
-Where applicable, repositories should document:
-
-- Business Purpose
-- Data Sources
-- Dependencies
-- Deployment Process
-- Monitoring Requirements
-- Support Contacts
-
----
-
-## Semantic Commit Standards
-
-All repositories within the organization follow a semantic commit convention to improve change tracking, release management, and repository history.
-
-### Commit Format
-
-```text
-<type>: <description>
-```
-
-Examples:
-
-```text
-feat: add data freshness notification pipeline
-
-fix: resolve duplicate carrier processing issue
-
-refactor: simplify report delivery workflow
-
-docs: update onboarding instructions
-
-test: add validation coverage for permissions pipeline
-```
-
-### Standard Commit Types
-
-| Type | Purpose |
-|--------|---------|
-| feat | New functionality |
-| fix | Bug fixes |
-| docs | Documentation changes |
-| refactor | Code restructuring without behavior changes |
-| test | Testing updates |
-| chore | Maintenance tasks |
-| perf | Performance improvements |
-| ci | CI/CD updates |
-
-### Reference
-
-For complete semantic commit guidelines, review:
-
-🔗 **Semantic Commit Standards:**  
-[Internaleplace-with-your-link
-
----
-
-## Development Lifecycle
-
-All production solutions follow a standardized lifecycle.
-
-### 1. Plan
-
-- Define business requirements
-- Evaluate dependencies and risks
-- Document technical approach
-
-### 2. Develop
-
-- Implement approved solution design
-- Create documentation
-- Implement validation and logging
-
-### 3. Review
-
-- Submit Pull Request
-- Complete peer review
-- Validate testing and operational requirements
-
-### 4. Deploy
-
-- Promote through approved release process
-- Validate deployment success
-- Confirm monitoring visibility
-
-### 5. Support
-
-- Monitor production performance
-- Address issues
-- Identify improvement opportunities
-
----
-
-## Branching Strategy
-
-### Protected Branches
-
-#### `main`
-
-Production-ready code only.
-
-Requirements:
-
-- Pull Request approval
-- Successful validation/testing
-- Current documentation
-
-#### `develop`
-
-Primary integration branch for active development.
-
-Used for:
-
-- Feature integration
-- Release preparation
-- Collaborative development
-
----
-
-### Working Branches
-
-Naming Convention:
-
-```text
-feature/<description>
-bugfix/<description>
-hotfix/<description>
-```
-
-Examples:
-
-```text
-feature/call-center-enhancements
-
-bugfix/permission-sync-failure
-
-hotfix/report-delivery-recovery
-```
-
----
-
-## Contribution Standards
-
-All contributors are expected to follow organization standards.
-
-### Required
-
-- Meaningful repository descriptions
-- Updated documentation
-- Semantic
+Built to support reliable data workflows, accountable reporting, and operational insight at scale.
