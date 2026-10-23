@@ -2,7 +2,7 @@
 
 > Operational data systems, reporting pipelines, and business intelligence tooling built for reliable decision support.
 
-Agent Pipeline is a collection of production repositories focused on data engineering, automation, reporting, and operational analytics. The organization brings together ETL workflows, reusable services, internal applications, and scheduled data products that support internal teams and downstream reporting needs.
+Agent Pipeline is a collection of production repositories focused on data engineering, automation, reporting, and operational analytics. The organization brings together ETL workflows, reusable services, and business-facing reporting tools designed to support dependable operational decision-making.
 
 ## What we build
 
@@ -16,21 +16,21 @@ Agent Pipeline is a collection of production repositories focused on data engine
 
 ### Core data pipelines
 
-- [simplified-all-agent-report-pipeline](https://github.com/Agent-Pipeline/simplified-all-agent-report-pipeline) — Daily reporting pipeline delivering the S-AAR to Files.com from Snowflake.
-- [integrity-downline-permissions-pipeline](https://github.com/Agent-Pipeline/integrity-downline-permissions-pipeline) — RTS reporting pipeline that helps ensure permissions are accurately reflected across systems.
-- [expiring-taxpayer-pipeline](https://github.com/Agent-Pipeline/expiring-taxpayer-pipeline) — Weekly reporting pipeline for tracking missing or expiring W9s and sending updates to HubSpot.
-- [unified-health-call-center-reporting](https://github.com/Agent-Pipeline/unified-health-call-center-reporting) — Scheduled Windows task workflow that collects, validates, and consolidates Health reports from shared inboxes.
+- [Daily reporting pipeline](https://github.com/Agent-Pipeline/simplified-all-agent-report-pipeline) — Delivers the S-AAR output to Files.com from Snowflake.
+- [RTS reporting pipeline](https://github.com/Agent-Pipeline/integrity-downline-permissions-pipeline) — Helps ensure permissions are accurately reflected across downstream systems.
+- [Weekly compliance reporting pipeline](https://github.com/Agent-Pipeline/expiring-taxpayer-pipeline) — Tracks missing or expiring W9s and sends updates to HubSpot.
+- [Health reporting workflow](https://github.com/Agent-Pipeline/unified-health-call-center-reporting) — Collects, validates, and consolidates health reporting data from shared inbox sources.
 
 ### Services and platform logic
 
-- [db-flow-service](https://github.com/Agent-Pipeline/db-flow-service) — Core carrier-processing logic and business-critical data pipeline orchestration for Agent Pipeline BI dashboards.
-- [data-freshness-reporting-service](https://github.com/Agent-Pipeline/data-freshness-reporting-service) — Service that distributes data freshness reporting to agencies that request it.
-- [data-consolidation-feeds](https://github.com/Agent-Pipeline/data-consolidation-feeds) — Aggregates and distributes unique carrier reporting feeds.
+- [Core processing service](https://github.com/Agent-Pipeline/db-flow-service) — Houses core carrier-processing logic and orchestrates critical data pipeline workflows.
+- [Data freshness reporting service](https://github.com/Agent-Pipeline/data-freshness-reporting-service) — Distributes data freshness reporting to agencies that request it.
+- [Consolidated reporting feeds](https://github.com/Agent-Pipeline/data-consolidation-feeds) — Aggregates and distributes unique carrier reporting feeds.
 
 ### Reporting and application layers
 
-- [comparison-reporting-app](https://github.com/Agent-Pipeline/comparison-reporting-app) — Production application used for comparison report generation.
-- [bi-callcenter-etl](https://github.com/Agent-Pipeline/bi-callcenter-etl) — ETL process supporting the Call Center Dashboard.
+- [Comparison reporting application](https://github.com/Agent-Pipeline/comparison-reporting-app) — Supports production report generation for comparison-based analysis.
+- [Call center reporting ETL](https://github.com/Agent-Pipeline/bi-callcenter-etl) — Powers ETL processing for the Call Center Dashboard.
 
 ## Focus areas
 
