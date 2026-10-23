@@ -14,23 +14,9 @@ Agent Pipeline is a collection of production repositories focused on data engine
 
 ## Portfolio highlights
 
-### Core data pipelines
-
-- Daily reporting workflows delivering S-AAR outputs from Snowflake.
-- RTS permissions reporting to validate downstream access accuracy.
-- Weekly compliance tracking for missing or expiring W9 activity.
-- Health reporting operations consolidating data from shared inbox sources.
-
-### Services and platform logic
-
-- Core processing services for carrier logic and workflow orchestration.
-- Data freshness distribution for agency reporting requests.
-- Consolidated reporting feeds for unique carrier distribution.
-
-### Reporting and application layers
-
-- Comparison reporting applications for business analysis.
-- Call center reporting processes supporting dashboard operations.
+- Core data pipelines
+- Services and platform logic
+- Reporting and application layers
 
 ## Focus areas
 
